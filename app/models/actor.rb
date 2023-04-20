@@ -13,5 +13,6 @@
 class Actor < ApplicationRecord
   has_many( :characters)
   belongs_to ( :movie)
-  
+
+  validates (:name, { :presence => true })
 end
